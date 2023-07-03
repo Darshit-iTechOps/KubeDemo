@@ -15,8 +15,9 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+ENV PORT=5000
 # Expose the desired port
-EXPOSE 5000
+EXPOSE $PORT
 
 # Define the command to start the backend
-CMD [ "npm", "start" ]
+CMD [ "npm", "server.js" ]
