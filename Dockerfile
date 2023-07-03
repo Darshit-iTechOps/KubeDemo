@@ -12,7 +12,7 @@ RUN npm install -g npm@latest
 RUN npm install
 
 # Copy the rest of the application code
-COPY . .
+COPY . ./
 
 # Expose a port (change the port number if needed)
 EXPOSE 5000
