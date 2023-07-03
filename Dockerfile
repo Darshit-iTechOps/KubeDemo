@@ -1,21 +1,8 @@
-# Base image
-FROM node:14
-
-# Set the working directory inside the container
-WORKDIR /
-
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json jsconfig.json ./
-
-# Install dependencies
-RUN npm install -g npm@latest
+FROM node:latest
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY package.json /usr/src/app/
 RUN npm install
-
-# Copy the rest of the application code
-COPY . ./
-
-# Expose a port (change the port number if needed)
+COPY . /usr/src/app
 EXPOSE 5000
-
-# Start the application
-CMD ["npm", "start"]
+CMD [ “npm”, “start” ] 
