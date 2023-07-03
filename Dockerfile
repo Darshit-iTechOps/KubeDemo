@@ -1,8 +1,20 @@
-FROM node:latest
-RUN mkdir /app
+# Specify the base image
+FROM node:14-alpine
+
+# Set the working directory
 WORKDIR /app
-COPY package.json /app
+
+# Copy the package.json and package-lock.json files
+COPY package*.json ./
+
+# Install dependencies
 RUN npm install
-COPY . ./
-EXPOSE 5000
-CMD [ “npm”, “start” ] 
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the desired port
+EXPOSE 3000
+
+# Define the command to start the backend
+CMD [ "npm", "start" ]
