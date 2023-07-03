@@ -1,6 +1,6 @@
 FROM node:latest
 RUN mkdir /app
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY package.json /app
 RUN npm install
 COPY . ./
