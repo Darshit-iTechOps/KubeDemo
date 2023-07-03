@@ -20,4 +20,4 @@ ENV PORT=5000
 EXPOSE $PORT
 
 # Define the command to start the backend
-CMD [ "npm", "server.js" ]
+CMD [ "npm", "start" ]
