@@ -1,6 +1,3 @@
-import express from 'express';
-import os from 'os';
-
 
 const express = require('express');
 const connectDB = require('./config/db');
