@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  generateName: reactjs-
+  Name: reactjs-
 spec:
   replicas: 1
   selector:
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  generateName: reactjs-svc-
+  Name: reactjs-svc-
 spec:
   type: LoadBalancer
   selector:
