@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  generatename: reactjs-
+  generateName: reactjs-
 spec:
   replicas: 1
   selector:
@@ -22,5 +22,16 @@ spec:
           ports:
             - containerPort: 5000
 ---
-
-apiVersion
+apiVersion: v1
+kind: Service
+metadata:
+  generateName: reactjs-svc-
+spec:
+  type: LoadBalancer
+  selector:
+    app: reactjs
+  ports:
+    - port: 3000
+      targetPort: 3000
+    - port: 5000
+      targetPort: 5000
