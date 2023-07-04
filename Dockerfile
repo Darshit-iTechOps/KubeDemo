@@ -20,5 +20,4 @@ ENV PORT=5000
 EXPOSE $PORT
 
 # Define the command to start the backend
-CMD [ "npm", "start", "--host", "192.168.1.13" ]
-
+CMD [ "npm", "start",]
