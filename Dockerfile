@@ -15,7 +15,7 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-ENV PORT=5000
+ENV PORT=27017
 # Expose the desired port
 EXPOSE $PORT
 
