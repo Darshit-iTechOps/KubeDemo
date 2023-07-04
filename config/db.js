@@ -18,5 +18,7 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
-
+module.exports = {
+  mongoURI: 'mongodb://localhost:27017/dev-social'
+};
 module.exports = connectDB;
