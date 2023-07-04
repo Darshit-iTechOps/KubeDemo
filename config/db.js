@@ -19,6 +19,6 @@ const connectDB = async () => {
   }
 };
 module.exports = {
-  mongoURI: 'mongodb://localhost:27017/dev-social'
+  mongoURI: 'mongodb://192.168.1.13:27017/dev-social'
 };
 module.exports = connectDB;

@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose the desired port
-EXPOSE 5000
+EXPOSE 3000
 
 # Define the command to start the frontend
 CMD [ "npm", "start" ]

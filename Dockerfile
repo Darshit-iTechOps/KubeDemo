@@ -8,16 +8,14 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install -g npm@latest
-
 RUN npm install
 
 # Copy the rest of the application code
 COPY . .
 
-ENV PORT=5000
-# Expose the desired port
-EXPOSE $PORT
 
-# Define the command to start the backend
+# Expose the desired port
+EXPOSE 5000
+
+# Define the command to start the frontend
 CMD [ "npm", "start" ]
