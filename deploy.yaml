@@ -13,6 +13,7 @@ spec:
         app: reactjs
     spec:
       containers:
+        imagePullPolicy: IfNotPresent
         - name: frontend
           image: client:0.1.0
           ports:
