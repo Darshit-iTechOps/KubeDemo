@@ -13,13 +13,14 @@ spec:
         app: reactjs
     spec:
       containers:
-        imagePullPolicy: IfNotPresent
         - name: frontend
           image: client:0.1.0
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
         - name: backend
           image: devconnector:1.0.0
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
 ---
